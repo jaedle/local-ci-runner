@@ -19,7 +19,7 @@ tasks:
 
   build:
     - task: clean
-    - go build -o out/lcr main.go
+    - go build -o out/lcr cmd/cli/main.go
 
   clean: rm -rf out/ && mkdir out/
 
