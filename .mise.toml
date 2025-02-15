@@ -1,0 +1,4 @@
+[tools]
+golang = '1.24'
+golangci-lint = '1.57.2'
+ginkgo = 'latest'
