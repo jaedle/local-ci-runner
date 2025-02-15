@@ -17,6 +17,7 @@ tasks:
 
   build:
     - task: clean
+    - go build -o out/lcr main.go
 
   clean: rm -rf out/ && mkdir out/
 
@@ -28,4 +29,4 @@ tasks:
   install:
     desc: install locally (for development)
     deps: [ build ]
-    cmd: cp
+    cmd: cp out/lcr "$HOME/bin/lcr"
