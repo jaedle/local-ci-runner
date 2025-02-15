@@ -20,6 +20,13 @@ task install
 
 ## Usage
 
+### Bootstrap your machine
+
+```sh
+lcr bootstrap
+```
+
+
 ### Submit a new CI run
 
 ```sh

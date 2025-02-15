@@ -9,10 +9,12 @@ tasks:
     aliases: [ default ]
     cmds:
       - task: format
+      - task: lint
       - task: build
       - task: vendor
 
   format: go fmt ./...
+  lint: golangci-lint run ./...
 
 
   build:
