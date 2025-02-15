@@ -20,6 +20,8 @@ task install
 
 ## Usage
 
+This is heavily based on docker. Please ensure to have a docker daemon up and running!
+
 ### Bootstrap your machine
 
 ```sh
