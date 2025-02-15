@@ -1,0 +1,31 @@
+version: '3'
+
+silent: true
+
+tasks:
+
+  world:
+    desc: perform local validations
+    aliases: [ default ]
+    cmds:
+      - task: format
+      - task: build
+      - task: vendor
+
+  format: go fmt ./...
+
+
+  build:
+    - task: clean
+
+  clean: rm -rf out/ && mkdir out/
+
+  vendor:
+    - go mod tidy
+    - go mod verify
+    - go mod vendor
+
+  install:
+    desc: install locally (for development)
+    deps: [ build ]
+    cmd: cp
